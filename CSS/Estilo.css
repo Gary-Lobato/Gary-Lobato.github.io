@@ -122,15 +122,22 @@ header a img {
 }
 //////////////////////* ITZEL *//////////////////////
 
-#hero-material {
-    background-image: url('../Imagenes/plumas-coloridas.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 4rem 1rem;
-    text-align: center;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
+/*fondo plumas */
+#material_adicional {
+  height: 350px;
+  background-image: url('../Imagenes/comunidad.jpg');
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: 100% auto;              
+  display: flex;               
+  align-items: center;          
+  justify-content: center;     
+  color: white; 
+ font-size: 2rem;
+  /* font-size: 40pt; */
+  margin-bottom: 0;
+    
 }
 
 /*fondo plumas 
@@ -256,7 +263,7 @@ article{
 }
 
 /*fondo comunidad */
-.comunidad {
+#comunidad {
   height: 350px;
   background-image: url('../Imagenes/comunidad.jpg');
   background-size: cover;       
