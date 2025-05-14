@@ -122,39 +122,6 @@ header a img {
 }
 //////////////////////* ITZEL *//////////////////////
 
-/*fondo plumas */
-#material_adicional {
-  height: 350px;
-  background-image: url('../Imagenes/comunidad.jpg');
-  background-size: cover;       
-  background-position: center;  
-  background-repeat: no-repeat; 
-  background-size: 100% auto;              
-  display: flex;               
-  align-items: center;          
-  justify-content: center;     
-  color: white; 
- font-size: 2rem;
-  /* font-size: 40pt; */
-  margin-bottom: 0;
-    
-}
-
-/*fondo plumas 
-#plumas_fondo {
-  height: 350px;
-  background-image: url('../images/plumas.jpg');
-  background-size: cover;       
-  background-position: center;  
-  background-repeat: no-repeat; 
-  background-size: 100% auto;              
-  display: flex;               
-  align-items: center;          
-  justify-content: center;     
-  color: white;  
-  /* font-size: 40pt; */
-  margin-bottom: 0;
-}*/
 
 /* TUTORIAL */
 .tutorial {
@@ -261,6 +228,17 @@ article{
     width: 100%;
     border-radius: 10px;
 }
+form{
+    width: 30%;
+    background-color:#E9762B;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: auto;
+    border-radius: 20px;
+    text-align: center;
+}
 
 /*fondo comunidad */
 #comunidad {
@@ -278,6 +256,26 @@ article{
   /* font-size: 40pt; */
   margin-bottom: 0;
     
+}
+
+#material {
+  height: 350px;
+  background-image: url('../Imagenes/plumas-coloridas.jpg');
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: 100% auto;              
+  display: flex;               
+  align-items: center;          
+  justify-content: center;     
+  color: white; 
+ font-size: 2rem;
+  /* font-size: 40pt; */
+  margin-bottom: 0;
+    
+}
+#pregunta{
+    text-align: center;
 }
 
 
