@@ -16,7 +16,7 @@ header, nav, main, footer{
 }
 
 .logo{
-    height: 30px;
+    height: 150px;
 }
 
 header{
@@ -120,3 +120,168 @@ header a img {
     margin-top: 0;
     margin-bottom: 15px;
 }
+//////////////////////* ITZEL *//////////////////////
+
+#hero-material {
+    background-image: url('img/plumas-coloridas.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1rem;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/*fondo plumas */
+#plumas_fondo {
+  height: 350px;
+  background-image: url('../images/plumas.jpg');
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: 100% auto;              
+  display: flex;               
+  align-items: center;          
+  justify-content: center;     
+  color: white;  
+  /* font-size: 40pt; */
+  margin-bottom: 0;
+}
+
+/* TUTORIAL */
+.tutorial {
+    padding: 10px; 
+    color: #E9762B ;
+    text-align: left;
+    font-size: 20pt;
+}
+
+
+.video-card {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+    height: auto;
+}
+
+.video-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 300px;
+    width: auto;
+}
+
+.icono-video {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    font-size:  40pt;
+    padding: 0.5rem 0.7rem;
+    color: #000;
+    text-align: center;
+}
+
+/* CONTENIDO RELACIONADO */
+.contenido-relacionado {
+    padding: 2rem;
+    background-color: #fff8dd;
+    color: #E9762B ;
+    text-align: left;
+    font-size: 20pt;
+    
+}
+
+.videos{
+    height: 290px;
+    width: auto;
+    
+}
+.grid-videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.grid-videos .video-card {
+    height: 290px;
+    width: auto;
+}
+
+.grid-videos .video-card p {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    
+}
+
+/* ARTÍCULOS */
+.articulos {
+    padding: 2rem;
+   background-color: white;  
+   font-size: 2rem;
+   margin-bottom: 0;
+   color: #E9762B ;
+}
+article{
+    background-color: blueviolet;
+}
+.texto{
+    color: #0d4715;
+    font-size: 15pt;
+    text-align: justify;
+}
+.articulos_images{
+    width: 80%;
+}
+.grid-articulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.grid-articulos article {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.grid-articulos .imagen img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*fondo comunidad */
+#plantas_fondo {
+  height: 350px;
+  background-image: url('../images/');
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: 100% auto;              
+  display: flex;               
+  align-items: center;          
+  justify-content: center;     
+  color: white; 
+ font-size: 2rem;
+  /* font-size: 40pt; */
+  margin-bottom: 0;
+    
+}
+
+
+
+
+
+
+///////////////////////////////////////////////////////
+
+
+
+
+
+
