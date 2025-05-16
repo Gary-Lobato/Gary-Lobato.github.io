@@ -280,8 +280,32 @@ form{
 
 ///////////////////////////////////////////////////////
 
-
-
+.search-form {
+        display: flex;
+        align-items: center;
+    }
+    
+    .search-form input[type="search"] {
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px 0 0 4px;
+        width: 200px;
+    }
+    
+    .search-form button {
+        padding: 8px 12px;
+        background: #333;
+        color: white;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+    }
+    
+    .search-form button:hover {
+        background: #555;
+    }
+    
+///////////////////////////////////////////////////////
 
 
 

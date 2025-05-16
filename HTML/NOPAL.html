@@ -4,23 +4,35 @@
     </head>
     <body>
         <header>
-           <table class="header-table">
-            <tr>
+                
+<!-- Contenedor principal del encabezado -->           
+    <table class="header-table">
+               <tr>
+                 <!-- Primera celda: Logo que funciona como enlace -->
                 <td>
-                   <a href=""> <img class="logo" src="../Imagenes/logo.png" alt="Sobre nosotros"> </a>
-                    
+                  <!-- Enlace que lleva a la página principal (href vacío = misma página) -->
+                   <a href="index.html"> <img class="logo" src="../Imagenes/logo.png" alt="Sobre nosotros"> </a>
                 </td>
+                <!-- Espacio -->
                 <td>
-                    
+                
                 </td>
+                <!-- Espacio -->
                 <td>
                 </td>
+                <!-- Espacio -->
                 <td>
-                    <h3>Buscador</h3>
+                <!--Formulario de búsqueda -->
+                    <form action="resultados-busqueda.html" method="get">
+                    <input type="search" name="q" placeholder="Buscar...">
+                    <button type="submit">Buscar</button>
+                    </form>
+                
                 </td>
             </tr>
-        </table>
-           
+    </table>
+<!-- final del encabezado -->
+     
             <h1>Nopal (Opuntia ficus-indica)</h1>
         </header>
         <main>

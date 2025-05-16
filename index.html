@@ -1,33 +1,43 @@
 <html>
-    <head>
-        <title>Misión biodiversa</title>
-              <link rel="stylesheet" href="../CSS/Estilo.css" "text/css"/>
+            <head>
+             <title>Misión biodiversa</title>
+             <link rel="stylesheet" href="../CSS/Estilo.css" "text/css"/>
+            </head>
+            
+            <body>
                
-    </head>
-    
-    
-    <body>
-        <header>
-           
-            <table class="header-table">
-            <tr>
+                <header>
+                
+<!-- Contenedor principal del encabezado -->           
+    <table class="header-table">
+               <tr>
+                 <!-- Primera celda: Logo que funciona como enlace -->
                 <td>
-                   <a href=""> <img class="logo" src="../Imagenes/logo.png" alt="Sobre nosotros"> </a>
-                    
+                  <!-- Enlace que lleva a la página principal (href vacío = misma página) -->
+                   <a href="index.html"> <img class="logo" src="../Imagenes/logo.png" alt="Sobre nosotros"> </a>
                 </td>
+                <!-- Espacio -->
                 <td>
-                    
+                
                 </td>
+                <!-- Espacio -->
                 <td>
                 </td>
+                <!-- Espacio -->
                 <td>
-                    <h3>Buscador</h3>
+                <!--Formulario de búsqueda -->
+                    <form action="resultados-busqueda.html" method="get">
+                    <input type="search" name="q" placeholder="Buscar...">
+                    <button type="submit">Buscar</button>
+                    </form>
+                
                 </td>
             </tr>
-        </table>
-            
-        </header>
-    </body>
+    </table>
+<!-- final del encabezado -->
+
+                </header>
+        </body>
         
     <nav>
         
