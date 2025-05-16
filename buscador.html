@@ -3,7 +3,6 @@
 <head>
     <title>Buscador Sencillo</title>
     <style>
-        /* Estilos básicos que puedes personalizar */
         body {
             font-family: Arial, sans-serif;
             max-width: 800px;
@@ -37,6 +36,9 @@
             margin-top: 0;
             color: #2E7D32;
         }
+        .search-snippet {
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -44,7 +46,7 @@
     
     <!-- Buscador Sencillo -->
     <div id="buscador">
-        <input type="text" id="termino-busqueda" placeholder="Escribe qué buscas...">
+        <input type="text" id="termino-busqueda" placeholder="Escribe qué buscas..." value="">
         <button id="boton-buscar">Buscar</button>
     </div>
     
@@ -56,24 +58,23 @@
         const paginasDeTuSitio = [
             {
                 titulo: "Material para Escuelas",
-                url: "material_adicional.html",
-                descripcion: "Encuentra aquí actividades y recursos educativos..."
+                url: "../HTML/material_adicional.html",
+                descripcion: "Encuentra aquí actividades y recursos educativos sobre biodiversidad del maíz."
             },
             {
                 titulo: "Comunidad",
-                url: "Comunidad.html",
-                descripcion: "Únete a nuestra comunidad..."
+                url: "../HTML/Comunidad.html",
+                descripcion: "Únete a nuestra comunidad de conservación de semillas tradicionales."
             },
             {
                 titulo: "Perfil de Usuario",
-                url: "perfil.html",
-                descripcion: "Administra tu perfil y tus contribuciones al proyecto..."
+                url: "../HTML/perfil.html",
+                descripcion: "Administra tu perfil y tus contribuciones al proyecto."
             }
         ];
         
-        // Función que hace la búsqueda
-        function buscar() {
-            const termino = document.getElementById('termino-busqueda').value.toLowerCase();
+        // Función que realiza la búsqueda
+        function realizarBusqueda(termino) {
             const resultadosDiv = document.getElementById('resultados');
             resultadosDiv.innerHTML = '';
             
@@ -88,24 +89,47 @@
             );
             
             if (resultados.length > 0) {
+                resultadosDiv.innerHTML = `<h2>Resultados para: "${termino}"</h2>`;
+                
                 resultados.forEach(pagina => {
                     resultadosDiv.innerHTML += `
                         <div class="resultado">
                             <h3><a href="${pagina.url}">${pagina.titulo}</a></h3>
-                            <p>${pagina.descripcion}</p>
-                            <a href="${pagina.url}">Ir a esta página</a>
+                            <p class="search-snippet">${pagina.descripcion}</p>
+                            <a href="${pagina.url}">Ver más</a>
                         </div>
                     `;
                 });
             } else {
-                resultadosDiv.innerHTML = '<p>No encontramos resultados. Intenta con otras palabras.</p>';
+                resultadosDiv.innerHTML = `<p>No se encontraron resultados para "${termino}"</p>`;
             }
         }
         
-        // Eventos para activar la búsqueda
-        document.getElementById('boton-buscar').addEventListener('click', buscar);
+        // Función para manejar el evento de búsqueda
+        function manejarBusqueda() {
+            const termino = document.getElementById('termino-busqueda').value.trim().toLowerCase();
+            if (termino) {
+                // Actualiza la URL sin recargar la página
+                window.history.pushState({}, '', `buscador.html?q=${encodeURIComponent(termino)}`);
+                realizarBusqueda(termino);
+            }
+        }
+        
+        // Eventos
+        document.getElementById('boton-buscar').addEventListener('click', manejarBusqueda);
         document.getElementById('termino-busqueda').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') buscar();
+            if (e.key === 'Enter') manejarBusqueda();
+        });
+        
+        // Al cargar la página, verificar si hay parámetros de búsqueda
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            
+            if (query) {
+                document.getElementById('termino-busqueda').value = query;
+                realizarBusqueda(query.toLowerCase());
+            }
         });
     </script>
 </body>
