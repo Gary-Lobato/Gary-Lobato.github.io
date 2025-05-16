@@ -25,12 +25,28 @@
                 </td>
                 <!-- Espacio -->
                 <td>
-                <!--Formulario de búsqueda -->
-                    <form action="resultados-busqueda.html" method="get">
-                    <input type="search" name="q" placeholder="Buscar...">
-                    <button type="submit">Buscar</button>
+             <!-- Formulario de búsqueda MEJORADO -->
+                <a href="index.html"><img class="logo" src="../Imagenes/logo.png" alt="Inicio"></a>
+            </td>
+            <td colspan="2"></td>
+            <td style="text-align: right;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <form id="header-search" style="flex-grow: 1;">
+                        <input type="search" name="q" placeholder="Buscar..." style="width: 100%; padding: 8px;">
                     </form>
+                    <button type="submit" form="header-search" style="padding: 8px 15px;">Buscar</button>
+                    <a href="buscador.html" style="white-space: nowrap;">🔍 Avanzada</a>
+                </div>
                 
+                <script>
+                    document.getElementById('header-search').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const query = this.q.value.trim();
+                        if(query) {
+                            window.location.href = `buscador.html?q=${encodeURIComponent(query)}`;
+                        }
+                    });
+                </script>
                 </td>
             </tr>
     </table>

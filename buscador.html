@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscador Sencillo</title>
+    <style>
+        /* Estilos básicos que puedes personalizar */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #buscador {
+            margin: 30px 0;
+            display: flex;
+        }
+        #termino-busqueda {
+            padding: 10px;
+            width: 70%;
+            font-size: 16px;
+        }
+        #boton-buscar {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .resultado {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .resultado h3 {
+            margin-top: 0;
+            color: #2E7D32;
+        }
+    </style>
+</head>
+<body>
+    <h1>Buscador de Misión Biodiversa</h1>
+    
+    <!-- Buscador Sencillo -->
+    <div id="buscador">
+        <input type="text" id="termino-busqueda" placeholder="Escribe qué buscas...">
+        <button id="boton-buscar">Buscar</button>
+    </div>
+    
+    <!-- Aquí aparecerán los resultados -->
+    <div id="resultados"></div>
+    
+    <script>
+        // DATOS DE EJEMPLO - REEMPLAZA CON TUS PÁGINAS REALES
+        const paginasDeTuSitio = [
+            {
+                titulo: "Material para Escuelas",
+                url: "material_adicional.html",
+                descripcion: "Encuentra aquí actividades y recursos educativos..."
+            },
+            {
+                titulo: "Comunidad",
+                url: "Comunidad.html",
+                descripcion: "Únete a nuestra comunidad..."
+            },
+            {
+                titulo: "Perfil de Usuario",
+                url: "perfil.html",
+                descripcion: "Administra tu perfil y tus contribuciones al proyecto..."
+            }
+        ];
+        
+        // Función que hace la búsqueda
+        function buscar() {
+            const termino = document.getElementById('termino-busqueda').value.toLowerCase();
+            const resultadosDiv = document.getElementById('resultados');
+            resultadosDiv.innerHTML = '';
+            
+            if (!termino) {
+                resultadosDiv.innerHTML = '<p>Escribe algo para buscar</p>';
+                return;
+            }
+            
+            const resultados = paginasDeTuSitio.filter(pagina => 
+                pagina.titulo.toLowerCase().includes(termino) || 
+                pagina.descripcion.toLowerCase().includes(termino)
+            );
+            
+            if (resultados.length > 0) {
+                resultados.forEach(pagina => {
+                    resultadosDiv.innerHTML += `
+                        <div class="resultado">
+                            <h3><a href="${pagina.url}">${pagina.titulo}</a></h3>
+                            <p>${pagina.descripcion}</p>
+                            <a href="${pagina.url}">Ir a esta página</a>
+                        </div>
+                    `;
+                });
+            } else {
+                resultadosDiv.innerHTML = '<p>No encontramos resultados. Intenta con otras palabras.</p>';
+            }
+        }
+        
+        // Eventos para activar la búsqueda
+        document.getElementById('boton-buscar').addEventListener('click', buscar);
+        document.getElementById('termino-busqueda').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') buscar();
+        });
+    </script>
+</body>
+</html>
