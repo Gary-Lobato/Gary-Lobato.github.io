@@ -87,22 +87,22 @@ header{
             
             #h3_2{
                padding-left: 361px;
-                margin-top: -199px;
+                margin-top: -80px;
             }
             #h3_3{
                 padding-left: 695px;
-                margin-top: -199px;
+                margin-top: -80px;
             }
             #h3_4{
                 padding-left: 30px; 
             }
             #h3_5{
                padding-left: 361px;
-                margin-top: -199px; 
+                margin-top: -80px; 
             }
             #h3_6{
                 padding-left: 695px;
-                margin-top: -199px;
+                margin-top: -80px;
             }
             main{
                 width: 1200px;
@@ -113,7 +113,7 @@ header{
             }
            input[type=submit]{
                 margin-top: 20px;
-                margin-left: 10px;
+                margin-left: 0px;
                 background-color: #0d4715;
                 color: white;
                 font-weight: bold;
@@ -201,7 +201,7 @@ body {
 /* TUTORIAL */
 .tutorial {
     padding: 10px; 
-    color:  ;
+    color: #E9762B ;
     text-align: left;
     font-size: 20pt;
 }
