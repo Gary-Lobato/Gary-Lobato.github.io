@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscador Sencillo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #buscador {
+            margin: 30px 0;
+            display: flex;
+        }
+        #termino-busqueda {
+            padding: 10px;
+            width: 70%;
+            font-size: 16px;
+        }
+        #boton-buscar {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .resultado {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .resultado h3 {
+            margin-top: 0;
+            color: #2E7D32;
+        }
+        .search-snippet {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Buscador de Misión Biodiversa</h1>
+    
+    <!-- Buscador Sencillo -->
+    <div id="buscador">
+        <input type="text" id="termino-busqueda" placeholder="Escribe qué buscas..." value="">
+        <button id="boton-buscar">Buscar</button>
+    </div>
+    
+    <!-- Aquí aparecerán los resultados -->
+    <div id="resultados"></div>
+    
+    <script>
+        // DATOS DE LAS PÁGINAS REALES
+        const paginasDeTuSitio = [
+            {
+                titulo: "Material para Escuelas",
+                url: "../HTML/material_adicional.html",
+                descripcion: "Encuentra aquí actividades y recursos educativos sobre biodiversidad del maíz."
+            },
+            {
+                titulo: "Comunidad",
+                url: "../HTML/Comunidad.html",
+                descripcion: "Únete a nuestra comunidad de conservación de semillas tradicionales."
+            },
+            {
+                titulo: "Perfil de Usuario",
+                url: "../HTML/perfil.html",
+                descripcion: "Administra tu perfil y tus contribuciones al proyecto."
+            },
+// DATOS DE LAS PÁGINAS que faltan            
+            {
+                titulo: "Perfil de Usuario",
+                url: "../HTML/perfil.html",
+                descripcion: "Administra tu perfil y tus contribuciones al proyecto."
+            },
+            {
+                titulo: "Perfil de Usuario",
+                url: "../HTML/perfil.html",
+                descripcion: "Administra tu perfil y tus contribuciones al proyecto."
+            },
+            {
+                titulo: "Perfil de Usuario",
+                url: "../HTML/perfil.html",
+                descripcion: "Administra tu perfil y tus contribuciones al proyecto."
+            },
+            {
+                titulo: "Perfil de Usuario",
+                url: "../HTML/perfil.html",
+                descripcion: "Administra tu perfil y tus contribuciones al proyecto."
+            }
+        ];
+        
+// Función que realiza la búsqueda
+        function realizarBusqueda(termino) {
+            const resultadosDiv = document.getElementById('resultados');
+            resultadosDiv.innerHTML = '';
+            
+            if (!termino) {
+                resultadosDiv.innerHTML = '<p>Escribe algo para buscar</p>';
+                return;
+            }
+            
+            const resultados = paginasDeTuSitio.filter(pagina => 
+                pagina.titulo.toLowerCase().includes(termino) || 
+                pagina.descripcion.toLowerCase().includes(termino)
+            );
+            
+            if (resultados.length > 0) {
+                resultadosDiv.innerHTML = `<h2>Resultados para: "${termino}"</h2>`;
+                
+                resultados.forEach(pagina => {
+                    resultadosDiv.innerHTML += `
+                        <div class="resultado">
+                            <h3><a href="${pagina.url}">${pagina.titulo}</a></h3>
+                            <p class="search-snippet">${pagina.descripcion}</p>
+                            <a href="${pagina.url}">Ver más</a>
+                        </div>
+                    `;
+                });
+            } else {
+                resultadosDiv.innerHTML = `<p>No se encontraron resultados para "${termino}"</p>`;
+            }
+        }
+        
+        // Función para manejar el evento de búsqueda
+        function manejarBusqueda() {
+            const termino = document.getElementById('termino-busqueda').value.trim().toLowerCase();
+            if (termino) {
+                // Actualiza la URL sin recargar la página
+                window.history.pushState({}, '', `buscador.html?q=${encodeURIComponent(termino)}`);
+                realizarBusqueda(termino);
+            }
+        }
+        
+        // Eventos
+        document.getElementById('boton-buscar').addEventListener('click', manejarBusqueda);
+        document.getElementById('termino-busqueda').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') manejarBusqueda();
+        });
+        
+        // Al cargar la página, verificar si hay parámetros de búsqueda
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            
+            if (query) {
+                document.getElementById('termino-busqueda').value = query;
+                realizarBusqueda(query.toLowerCase());
+            }
+        });
+    </script>
+</body>
+</html>

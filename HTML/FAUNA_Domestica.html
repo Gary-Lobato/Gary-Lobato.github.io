@@ -1,26 +1,72 @@
 <html>
     <head>
         <title> Flora y Fauna Endemica</title>
+<<<<<<< HEAD
         <link rel="stylesheet" href="/CSS/Estilo.css" "text/css"/>
+=======
+        <link rel="stylesheet" href="../CSS/Estilo.css" "text/css"/>
+>>>>>>> e17629e5ce0ac7a5b40306f3f9efdfb4322a8782
     </head>
     <body>
         <header>
-           <table class="header-table">
-            <tr>
+                
+<!-- Contenedor principal del encabezado -->           
+    <table class="header-table">
+               <tr>
+                 <!-- Primera celda: Logo que funciona como enlace -->
                 <td>
-                   <a href=""> <img class="logo" src="../Imagenes/logo.png" alt="Sobre nosotros"> </a>
-                    
+                  <!-- Enlace que lleva a la página principal (href vacío = misma página) -->
+                   <a href="index.html"> <img class="logo" src="../Imagenes/logo.png" alt="Sobre nosotros"> </a>
                 </td>
+                
                 <td>
-                    
+                <!-- Espacio -->
                 </td>
+            
                 <td>
+                <!-- Espacio -->
                 </td>
-                <td>
-                    <h3>Buscador</h3>
-                </td>
+
+<!-- Formulario de búsqueda -->
+           
+<td colspan="2"></td>
+<td style="text-align: right;">
+    <form id="header-search" style="display: flex; align-items: center; gap: 0; width: auto;">
+        <input type="search" name="q" placeholder="Buscar..." style="
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-right: none;
+            border-radius: 4px 0 0 4px;
+            width: auto;
+            outline: none;
+        ">
+        <button type="submit" style="
+            padding: 8px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background 0.3s;
+        ">Buscar</button>
+    </form>
+    
+    <script>
+        document.getElementById('header-search').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = this.q.value.trim();
+            if(query) {
+                window.location.href = `buscador.html?q=${encodeURIComponent(query)}`;
+            }
+        });
+    </script>
+</td>      
+                   
+<!--Fin del Formulario de búsqueda --> 
+                          
             </tr>
-        </table>
+    </table>
+<!-- final del encabezado -->
            
             
         </header>
@@ -55,7 +101,30 @@
             </section>
         </main>
         <footer>
-            
+    
+<!-- Contenedor del Footer -->
+    <table class="footer-table">
+            <tr>
+                <td>
+                    <h3>Empresa</h3>
+                    <a href="HTML/Nosotros.html">Sobre nosotros</a>
+                    
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                </td>
+                <td>
+                    <h3>Por Descubrir</h3>
+                    <a href="../HTML/material_adicional.html">Ideas para la escuela</a>
+                    <a href="../HTML/Comunidad.html">Comunidad</a>
+                    <a href="../HTML/perfil.html">Perfil</a>
+                </td>
+            </tr>
+        </table>
+<!-- Fin del contenido del Footer -->
+ 
         </footer>
     </body>
 </html>
