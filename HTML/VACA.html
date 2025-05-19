@@ -1,37 +1,30 @@
 <html>
     <head>
         <title>FLore y Fauna Endemica </title>
-<<<<<<< HEAD
-        <link rel="stylesheet" href="/CSS/Estilo.css" type="text/css">
-=======
-        <link rel="stylesheet" href="../CSS/Estilo.css" "text/css"/>
->>>>>>> e17629e5ce0ac7a5b40306f3f9efdfb4322a8782
-    </head>
-    <body>
-        <header>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="../CSS/estilos-unificados.css">
+    
+</head>
+
+<body>
+<!--====================================Contenedor principal del encabezado====================================-->
+    <header>
                 
-<!-- Contenedor principal del encabezado -->           
+<!--====================================Logo====================================-->
     <table class="header-table">
                <tr>
-                 <!-- Primera celda: Logo que funciona como enlace -->
                 <td>
-                  <!-- Enlace que lleva a la página principal (href vacío = misma página) -->
-                   <a href="index.html"> <img class="logo" src="../Imagenes/logo.png" alt="Sobre nosotros"> </a>
+                   <a href="index.html"> <img class="logo" src="../Imagenes/Blogo.png" alt="inicio"> </a>
                 </td>
                 
-                <td>
-                <!-- Espacio -->
-                </td>
-            
-                <td>
-                <!-- Espacio -->
-                </td>
-
-<!-- Formulario de búsqueda -->
+                
+<!--====================================Formulario de búsqueda====================================-->
            
 <td colspan="2"></td>
 <td style="text-align: right;">
-    <form id="header-search" style="display: flex; align-items: center; gap: 0; width: auto;">
+   
+    <form id="header-search">
         <input type="search" name="q" placeholder="Buscar..." style="
             padding: 8px;
             border: 1px solid #ddd;
@@ -41,13 +34,14 @@
             outline: none;
         ">
         <button type="submit" style="
-            padding: 8px 15px;
+            padding: 8px;
             background: #4CAF50;
             color: white;
             border: none;
             border-radius: 0 4px 4px 0;
             cursor: pointer;
             transition: background 0.3s;
+            width: auto;
         ">Buscar</button>
     </form>
     
@@ -62,14 +56,25 @@
     </script>
 </td>      
                    
-<!--Fin del Formulario de búsqueda --> 
+
                           
             </tr>
     </table>
-<!-- final del encabezado -->
-
-            
-        </header>
+<!--====================================Fin del Formulario de búsqueda====================================-->
+<!--====================================Menú de Navegación====================================-->
+ 
+        <nav class="GuiaNav">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="/HTML/Flora_Domestica.html">Flora</a></li>
+                <li class="menu-item"><a href="/HTML/FAUNA_Domestica.html">Fauna</a></li>
+                <li class="menu-item"><a href="HTML/material_adicional.html">Extras</a></li>
+                <li class="menu-item"><a href="/HTML/Comunidad.html">Comunidad</a></li>
+                <li class="menu-item"><a href="/HTML/perfil.html">Mi Perfil</a></li>
+            </ul>
+        </nav>
+</header>
+<!--====================================Fin Header====================================-->
+   
         <main>
             <section>
                 <div class="vaca">
@@ -98,20 +103,14 @@
                 </div>
             </section>    
         </main>
-        <footer>
     
-<!-- Contenedor del Footer -->
-    <table class="footer-table">
+<!--====================================Footer====================================-->   
+    <footer>
+        <table class="footer-table">
             <tr>
                 <td>
-                    <h3>Empresa</h3>
+                    <h2 id="Pie Footer" style=" color: rgb(160, 186, 165)">Mision Biodiversa</h2>
                     <a href="HTML/Nosotros.html">Sobre nosotros</a>
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
                 </td>
                 <td>
                     <h3>Por Descubrir</h3>
@@ -121,8 +120,83 @@
                 </td>
             </tr>
         </table>
-<!-- Fin del contenido del Footer -->
- 
-        </footer>
-    </body>
+    </footer>
+    
+<!--====================================Script  Header y Footer (Se ocultan)====================================-->    
+    <script>
+        // Control del Header y Footer
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            // Control del Header
+            if (currentScroll <= 50) {
+                header.classList.remove('hidden-header');
+            } else if (currentScroll > lastScroll) {
+                header.classList.add('hidden-header');
+            } else {
+                header.classList.remove('hidden-header');
+            }
+            lastScroll = currentScroll;
+
+            // Control del Footer
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollPosition = window.scrollY + windowHeight;
+            
+            footer.classList.toggle('visible-footer', scrollPosition >= documentHeight - 50);
+        });
+    </script>
+<!--====================================carrucel (Flora)====================================-->
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.species-carousel__track');
+    const slides = document.querySelectorAll('.species-carousel__slide');
+    const prevBtn = document.querySelector('.species-carousel__prev');
+    const nextBtn = document.querySelector('.species-carousel__next');
+    let currentIndex = 0;
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+});
+</script>
+<!--====================================carrucel (Fauna)====================================-->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.animales-carousel__track');
+    const slides = document.querySelectorAll('.animales-carousel__slide');
+    const prevBtn = document.querySelector('.animales-carousel__prev');
+    const nextBtn = document.querySelector('.animales-carousel__next');
+    let currentIndex = 0;
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+});
+</script>
+</body>
 </html>

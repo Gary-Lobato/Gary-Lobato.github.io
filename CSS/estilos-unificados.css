@@ -71,6 +71,12 @@ footer.visible-footer {
     display: block;
 }
 
+.header-search{
+ display: flex; 
+    align-items: center; 
+    width: auto;   
+}
+
 .header-table, .footer-table {
     width: 100%;
     max-width: 1200px;
@@ -103,7 +109,7 @@ footer.visible-footer {
 section {
     width: auto;
     height: auto;
-    background-color: #F1F0E9;
+    background-color: #FFF2CD;
     margin: 20px auto;
     padding: 10px;
     color: #B7B597;
@@ -242,12 +248,10 @@ section {
 
 /* ==================================== Formularios ==================================== */
 form {
-    width: 30%;
-    background-color: #E9762B;
     padding: 50px;
     margin: 20px auto;
     border-radius: 20px;
-    text-align: center;
+    text-align: right;
 }
 
 input[type="submit"] {
@@ -286,18 +290,18 @@ input[type="submit"] {
 }
 
 .species-link {
-    display: flex;          /* Nuevo: habilita flexbox */
-    justify-content: center;/* Centra horizontalmente */
-    align-items: center;    /* Centra verticalmente */
-    height: 300px;          /* Altura del contenedor (ajusta según necesites) */
+    display: flex;          
+    justify-content: center;
+    align-items: center;    
+    height: 300px;          
 }
 
 .species-image {
-    width: 250px;           /* Ancho fijo */
-    height: 250px;          /* Alto fijo */
-    object-fit:fill;    /* Mantiene proporciones sin recortar */
+    width: 250px;           
+    height: 250px;          
+    object-fit:fill;    
     border-radius: 10px;
-    margin: 0 auto;         /* Centrado adicional */
+    margin: 0 auto;         
 }
 
 /* Controles */
@@ -407,6 +411,53 @@ input[type="submit"] {
 /*==================================== fin Fauna Carrucel ====================================*/
 
 
+/*==================================== Menú de navegacion ====================================*/
+.GuiaNav {
+    margin: 0 20px;
+}
+
+.menu-list {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-item a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .GuiaNav {
+        order: 3;
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .menu-list {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/*====================================Fin Menú de navegacion ====================================*/
+
+
 /*==================================== Secciones especiales ====================================*/
 .contenido-relacionado {
     padding: 2rem;
@@ -502,6 +553,15 @@ input[type="submit"] {
     margin-top: 20px;
     clear: both;
 }
+h1, h3{
+    color: #CFA80B;
+    margin: 10px 0 10px;
+}
+
+p{
+    color: #23684C;
+}
+
 @media (max-width: 768px) {
     main {
         width: 95%;

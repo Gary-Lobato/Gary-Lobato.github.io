@@ -13,32 +13,85 @@
 </head>
 
 <body>
+<!--====================================Contenedor principal del encabezado====================================-->
     <header>
-        <table class="header-table">
-            <tr>
+                
+<!--====================================Logo====================================-->
+    <table class="header-table">
+               <tr>
                 <td>
-                    <a href="index.html">
-                        <img class="logo" src="../Imagenes/logo.png" alt="Logo Misión Biodiversa">
-                    </a>
+                   <a href="index.html"> <img class="logo" src="../Imagenes/Blogo.png" alt="inicio"> </a>
                 </td>
-                <td colspan="3"></td>
-                <td>
-                    <form class="search-form">
-                        <input type="search" placeholder="Buscar...">
-                        <button type="submit">Buscar</button>
-                    </form>
-                </td>
-            </tr>
-        </table>
-    </header>
+                
+                
+<!--====================================Formulario de búsqueda====================================-->
+           
+<td colspan="2"></td>
+<td style="text-align: right;">
+   
+    <form id="header-search">
+        <input type="search" name="q" placeholder="Buscar..." style="
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-right: none;
+            border-radius: 4px 0 0 4px;
+            width: auto;
+            outline: none;
+        ">
+        <button type="submit" style="
+            padding: 8px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: auto;
+        ">Buscar</button>
+    </form>
+    
+    <script>
+        document.getElementById('header-search').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = this.q.value.trim();
+            if(query) {
+                window.location.href = `buscador.html?q=${encodeURIComponent(query)}`;
+            }
+        });
+    </script>
+</td>      
+                   
 
-    <main>
+                          
+            </tr>
+    </table>
+<!--====================================Fin del Formulario de búsqueda====================================-->
+<!--====================================Menú de Navegación====================================-->
+ 
+        <nav class="GuiaNav">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="/HTML/Flora_Domestica.html">Flora</a></li>
+                <li class="menu-item"><a href="/HTML/FAUNA_Domestica.html">Fauna</a></li>
+                <li class="menu-item"><a href="HTML/material_adicional.html">Extras</a></li>
+                <li class="menu-item"><a href="/HTML/Comunidad.html">Comunidad</a></li>
+                <li class="menu-item"><a href="/HTML/perfil.html">Mi Perfil</a></li>
+            </ul>
+        </nav>
+</header>
+<!--====================================Fin Header====================================-->
+
+   
+     
+     <main>
+      
        <section
             img id="fondo_ave" src="Imagenes/1.jpg" alt="ave">
                <h2>Flora y Fauna silvestre</h2><br>
                 <p>Nuestro territorio entraña una enorme responsabilidad:<br>
                 una alta proporcion de sus especies son endémicas, es decir,<br> solo existen en nuestro país.</p>
             </section>
+            
+            
             <section id="section_1">
                 <video id="video_inicio" width="800" height="200" autoplay muted>
                     <source src="Videos/1.mp4" type="video/mp4">
@@ -221,11 +274,12 @@
             
     </main>
 
+<!--====================================Footer====================================-->   
     <footer>
         <table class="footer-table">
             <tr>
                 <td>
-                    <h3>Empresa</h3>
+                    <h2 id="Pie Footer" style=" color: rgb(160, 186, 165)">Mision Biodiversa</h2>
                     <a href="HTML/Nosotros.html">Sobre nosotros</a>
                 </td>
                 <td>
