@@ -13,7 +13,10 @@ header, nav, main, footer{
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
 }
+
+
 
 .logo{
     height: 150px;
@@ -278,5 +281,101 @@ form{
     
 ///////////////////////////////////////////////////////
 
+/* Empieza Zuriel */
+ section{
+                  width: auto;
+                  height: auto;
+                  background-color: #F1F0E9;
+                  margin-bottom: 20px;
+                  margin-left: auto;
+                  margin-right: auto;
+                  padding: 30px;
+                  color: #B7B597;
+                  font-family: "rubik";
+                  border-radius: 30px;
+              }
+            #section_1{
+                background-color: #41644A;
+            }
+            #img_logo{
+                height: 100px;
+            }
+            #fondo_ave{
+                background-image: url(../Imagenes/1.jpg);
+                color: #0D4715;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 180px;
+            }
+            #img_flot{
+             width: 305px;
+            float: left;
+            margin-right: 20px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            border-radius: 20px;
+            }
+            .parrafo{
+                text-align: left;
+            }
+            #video_inicio{
+                width: 50%;
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                border-radius: 20px;
+            }
 
+#img_faunayflora{
+                width: 300px;
+                height: 300px;
+                margin-left: 30px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                border-radius: 20px;
+            }
+            #h3_1{
+               padding-left: 30px; 
+            }
+            
+            #h3_2{
+               padding-left: 361px;
+                margin-top: -199px;
+            }
+            #h3_3{
+                padding-left: 695px;
+                margin-top: -199px;
+            }
+            #h3_4{
+                padding-left: 30px; 
+            }
+            #h3_5{
+               padding-left: 361px;
+                margin-top: -199px; 
+            }
+
+#h3_6{
+                padding-left: 695px;
+                margin-top: -199px;
+            }
+            main{
+                width: 1200px;
+                height: auto;
+                background-color: #41644A;
+                padding: 50px;
+                border-radius: 80px;
+            }
+           input[type=submit]{
+                margin-top: 20px;
+                margin-left: 10px;
+                background-color: #0d4715;
+                color: white;
+                font-weight: bold;
+                padding: 10px;
+                border-radius: 10px;
+                border-color: #41644A;
+            }
+/* Termina Zuriel */
 

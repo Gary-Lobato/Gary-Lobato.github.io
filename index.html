@@ -1,108 +1,232 @@
 <html>
-            <head>
-             <title>Misión biodiversa</title>
-             <link rel="stylesheet" href="../CSS/Estilo.css" "text/css"/>
-            </head>
-            
-            <body>
-               
-                <header>
-                
-<!-- Contenedor principal del encabezado -->           
-    <table class="header-table">
-               <tr>
-                 <!-- Primera celda: Logo que funciona como enlace -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Misión Biodiversa - Inicio</title>
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../CSS/estilos-unificados.css">
+    
+</head>
+
+<body>
+    <header>
+        <table class="header-table">
+            <tr>
                 <td>
-                  <!-- Enlace que lleva a la página principal (href vacío = misma página) -->
-                   <a href="index.html"> <img class="logo" src="../Imagenes/logo.png" alt="Sobre nosotros"> </a>
+                    <a href="index.html">
+                        <img class="logo" src="../Imagenes/logo.png" alt="Logo Misión Biodiversa">
+                    </a>
                 </td>
-                
-
-<!-- Formulario de búsqueda -->
-           
-<td colspan="2"></td>
-<td style="text-align: right;">
-    <form id="header-search" style="display: flex; align-items: center; gap: 0; width: auto;">
-        <input type="search" name="q" placeholder="Buscar..." style="
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-right: none;
-            border-radius: 4px 0 0 4px;
-            width: auto;
-            outline: none;
-        ">
-        <button type="submit" style="
-            padding: 8px 15px;
-            background: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-            transition: background 0.3s;
-        ">Buscar</button>
-    </form>
-    
-    <script>
-        document.getElementById('header-search').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const query = this.q.value.trim();
-            if(query) {
-                window.location.href = `buscador.html?q=${encodeURIComponent(query)}`;
-            }
-        });
-    </script>
-</td>      
-                   
-<!--Fin del Formulario de búsqueda --> 
-                          
+                <td colspan="3"></td>
+                <td>
+                    <form class="search-form">
+                        <input type="search" placeholder="Buscar...">
+                        <button type="submit">Buscar</button>
+                    </form>
+                </td>
             </tr>
-    </table>
-<!-- final del encabezado -->
+        </table>
+    </header>
 
-                </header>
-        </body>
-        
-    <nav>
-        
-    </nav>
-    
     <main>
-            <section
-            img id="fondo_ave" src="/Imagenes/1.jpg" alt="ave">
+       <section
+            img id="fondo_ave" src="Imagenes/1.jpg" alt="ave">
                <h2>Flora y Fauna silvestre</h2><br>
                 <p>Nuestro territorio entraña una enorme responsabilidad:<br>
                 una alta proporcion de sus especies son endémicas, es decir,<br> solo existen en nuestro país.</p>
             </section>
             <section id="section_1">
                 <video id="video_inicio" width="800" height="200" autoplay muted>
-                    <source src="video/1.mp4" type="video/mp4">
+                    <source src="Videos/1.mp4" type="video/mp4">
                 </video>
             </section>
-            <section>
-                <h1>EXPLORADOR DE ESPECIES FAUNA</h1>
-            </section>
-            <section>
-                <h1>EXPLORADOR DE ESPECIES FLORA</h1>
-            </section>
-            <section>
-                <h1>¡PAREMOS LA EXTINCIÓN!</h1>
-                 <p> <img class="flotante" id="img_left" src="img/2.jpg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie porttitor maximus. Sed dapibus augue quis magna congue venenatis. Maecenas ac dui nisl. Pellentesque porttitor elit quis mauris semper imperdiet. Morbi ut interdum turpis. Integer malesuada eget velit viverra vehicula.</p>
-            </section>
-        </main>
-    <footer>
+            
+<!--====================================Inicio FAuna Carrucel====================================-->
+
+<section class="animales-carousel">
+     <h1 class="animate__animated animate__rubberBand animate__delay-2s animate__fast">EXPLORADOR DE ESPECIES FAUNA</h1>
+     
+    <div><p>México esconde un universo salvaje que solo existe aquí… y tú puedes ser parte de él.
+    La Galería de Fauna Endémica de México no es un lugar, es una experiencia inmersiva donde los animales más increíbles, raros y simbólicos de nuestro país te harán replantearte todo lo que creías saber sobre la naturaleza. ¿Listos para conocer a estos símbolos de la biodiversidad?</p></div>
     
-<!-- Contenedor del Footer -->
-    <table class="footer-table">
+    <div class="animales-carousel__container">
+        <div class="animales-carousel__track">
+            
+            <!-- cuadro 1 - aguila -->
+            
+            <div class="animales-carousel__slide">
+                <a href="pagina-aguila.html" class="animales-link">
+                    <img src="Imagenes/4.jpg" alt="aguila" class="animales-image">
+                </a>
+            </div>
+            
+            <!-- cuadro 1 - buho -->
+            
+            <div class="animales-carousel__slide">
+                <a href="pagina-buho.html" class="animales-link">
+                    <img src="Imagenes/7.jpg" alt="buho" class="animales-image">
+                </a>
+            </div>
+            
+            <!-- cuadro 1 - mono -->
+            
+            <div class="animales-carousel__slide">
+                <a href="pagina-mono.html" class="animales-link">
+                    <img src="Imagenes/5.jpg" alt="mono" class="animales-image">
+                </a>
+            </div>
+        </div>
+        
+        <!-- Controles -->
+        <button class="animales-carousel__prev">‹</button>
+        <button class="animales-carousel__next">›</button>
+    </div>
+</section>
+
+<!--====================================Fin Fauna Carrucel====================================-->
+                    
+            
+<!--====================================Inicio Flora Carrucel====================================-->
+
+<section class="species-carousel">
+    <h1 class="animate__animated animate__fadeIn" style="margin-top: 10px">EXPLORADOR DE ESPECIES FLORA</h1>
+    <div><p>¿Te imaginas caminar entre plantas que solo existen aquí, en esta tierra llena de magia? La Galería de Flora Endémica de México no es un simple jardín: es un laberinto de vida única, donde cada hoja, flor y cactus cuenta una historia de resistencia, evolución y belleza salvaje.</p></div>
+    
+    <div class="species-carousel__container">
+        <div class="species-carousel__track">
+            <!-- cuadro 1 - Rosa -->
+            
+            <div class="species-carousel__slide">
+                <a href="pagina-rosa.html" class="species-link">
+                    <img src="Imagenes/8.jpg" alt="Rosa" class="species-image">
+                </a>
+            </div>
+            
+            <!-- cuadro 2 - Framboyán -->
+            
+            <div class="species-carousel__slide">
+                <a href="pagina-framboyan.html" class="species-link">
+                    <img src="Imagenes/6.jpg" alt="Framboyán" class="species-image">
+                </a>
+            </div>
+            
+            <!-- cuadro 3 - Bugambilia -->
+            
+            <div class="species-carousel__slide">
+                <a href="pagina-bugambilia.html" class="species-link">
+                    <img src="Imagenes/3.jpg" alt="Bugambilia" class="species-image">
+                </a>
+            </div>
+        </div>
+        
+        <!-- Controles -->
+        <button class="species-carousel__prev">‹</button>
+        <button class="species-carousel__next">›</button>
+    </div>
+</section>
+
+<!--====================================Fin Flora Carrucel====================================-->
+            
+            <section>
+                <h1 class="animate__animated animate__wobble">¡PAREMOS LA EXTINCIÓN!</h1>
+                 <p> <img id="img_flot" id="img_left" src="Imagenes/2.jpg"> Imagina un animal que parece un pequeño dragon acuático. con branquias peludas en los lados de su cabeza, una carita simpatica y un cuerpo parecido al de una salamandra. Ese es el ajolote, un anfibio único que vive solo en México.
+                 Su nombre científico es Ambystoma Mexicanum, pero todos lo conocen como ajolote. <br><br>
+                 Proteger al ajolote no es solo salvar una especie. Es salvar un pedacito del planeta, de nuestra historia y nuestro futuro. Tú puedes ser parte de ese cambio.<br><br>
+                 Porque incluso las acciones peque;as, como cuidar el agua o hablar del ajolote con tus amigos, familia o personas conocidas pueden tener un gran imacto.<br><br>
+                 Y para salvar al ajolote de la extinción, es crucial proteger y restaurar su hábitat en el lago de Xochimilco, México, donde es endémico. Esto implica reducir la contaminación, controlar especies invasoras como la carpa y tilapia, y promover la conservación de las chinampas, un sistema de agricultura sostenible que también funciona como refugio para los ajolotes. Además, se necesita concienciar al público sobre la importancia del ajolote y su hábitat, y apoyar las iniciativas de conservación y reproducción en cautiverio para su posterior liberación en el medio silvestre. </p>
+            </section>
+            
+            <section>
+<!--====================================Related Post====================================-->
+                
+                
+                <div class="related-posts">
+    <h3>Nuestros Articulos:</h3>
+    <div class="related-grid">
+        
+<!--==================================== 1 ====================================-->
+        <article class="related-post">
+            <a href="HTML/FAUNA_Domestica.html" class="related-link">
+                <figure>
+                    <img 
+                        src="Imagenes/animales.jpg" 
+                        alt="FAUNA_Domestica" 
+                        class="related-image"
+                        loading="lazy"
+                    >
+                </figure>
+                <span class="related-title">Fauna_Domestica</span>
+            </a>
+        </article>
+        
+        
+<!--==================================== 2 ====================================-->
+        <article class="related-post">
+            <a href="HTML/Flora_Domestica.html" class="related-link">
+                <figure>
+                    <img 
+                        src="Imagenes/Plantas.jpeg" 
+                        alt="Cempasuchil" 
+                        class="related-image"
+                        loading="lazy"
+                    >
+                </figure>
+                <span class="related-title">Flora_Domestica</span>
+            </a>
+        </article>
+     
+<!--==================================== 3 ====================================-->
+        <article class="related-post">
+            <a href="HTML/MAIZ.html" class="related-link">
+                <figure>
+                    <img 
+                        src="Imagenes/MAIZ.jpg" 
+                        alt="Cempasuchil" 
+                        class="related-image"
+                        loading="lazy"
+                    >
+                </figure>
+                <span class="related-title">Maíz (Zea mays)</span>
+            </a>
+        </article>
+
+<!--==================================== 4 ====================================-->
+        <article class="related-post">
+            <a href="HTML/CEMPA.html" class="related-link">
+                <figure>
+                    <img 
+                        src="Imagenes/CEMPA.jpg" 
+                        alt="Cempasuchil" 
+                        class="related-image"
+                        loading="lazy"
+                    >
+                </figure>
+                <span class="related-title">Cempasúchil (Tagetes erecta)</span>
+            </a>
+        </article>       
+        
+        
+        
+    </div>
+</div>
+                
+                
+                
+<!--====================================fin de los Related Post====================================-->
+            </section>
+            
+    </main>
+
+    <footer>
+        <table class="footer-table">
             <tr>
                 <td>
                     <h3>Empresa</h3>
                     <a href="HTML/Nosotros.html">Sobre nosotros</a>
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
                 </td>
                 <td>
                     <h3>Por Descubrir</h3>
@@ -112,7 +236,83 @@
                 </td>
             </tr>
         </table>
-<!-- Fin del contenido del Footer -->
-       
     </footer>
+    
+<!--====================================Script  Header y Footer (Se ocultan)====================================-->    
+    <script>
+        // Control del Header y Footer
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            // Control del Header
+            if (currentScroll <= 50) {
+                header.classList.remove('hidden-header');
+            } else if (currentScroll > lastScroll) {
+                header.classList.add('hidden-header');
+            } else {
+                header.classList.remove('hidden-header');
+            }
+            lastScroll = currentScroll;
+
+            // Control del Footer
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollPosition = window.scrollY + windowHeight;
+            
+            footer.classList.toggle('visible-footer', scrollPosition >= documentHeight - 50);
+        });
+    </script>
+<!--====================================carrucel (Flora)====================================-->
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.species-carousel__track');
+    const slides = document.querySelectorAll('.species-carousel__slide');
+    const prevBtn = document.querySelector('.species-carousel__prev');
+    const nextBtn = document.querySelector('.species-carousel__next');
+    let currentIndex = 0;
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+});
+</script>
+<!--====================================carrucel (Fauna)====================================-->
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.animales-carousel__track');
+    const slides = document.querySelectorAll('.animales-carousel__slide');
+    const prevBtn = document.querySelector('.animales-carousel__prev');
+    const nextBtn = document.querySelector('.animales-carousel__next');
+    let currentIndex = 0;
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+});
+</script>
+</body>
 </html>
