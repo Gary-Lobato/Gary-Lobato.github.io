@@ -15,7 +15,7 @@
     <table class="header-table">
                <tr>
                 <td>
-                   <a href="index.html"> <img class="logo" src="../Imagenes/Blogo.png" alt="inicio"> </a>
+                   <a href="../../index.html"> <img class="logo" src="../Imagenes/Blogo.png" alt="inicio"> </a>
                 </td>
                 
                 
@@ -45,12 +45,12 @@
         ">Buscar</button>
     </form>
     
-    <script>
+     <script>
         document.getElementById('header-search').addEventListener('submit', function(e) {
             e.preventDefault();
             const query = this.q.value.trim();
             if(query) {
-                window.location.href = `buscador.html?q=${encodeURIComponent(query)}`;
+                window.location.href = `../../buscador.html?q=${encodeURIComponent(query)}`;
             }
         });
     </script>
@@ -67,58 +67,57 @@
             <ul class="menu-list">
                 <li class="menu-item"><a href="/HTML/Flora_Domestica.html">Flora</a></li>
                 <li class="menu-item"><a href="/HTML/FAUNA_Domestica.html">Fauna</a></li>
-                <li class="menu-item"><a href="HTML/material_adicional.html">Extras</a></li>
+                <li class="menu-item"><a href="/HTML/material_adicional.html">Extras</a></li>
                 <li class="menu-item"><a href="/HTML/Comunidad.html">Comunidad</a></li>
                 <li class="menu-item"><a href="/HTML/perfil.html">Mi Perfil</a></li>
             </ul>
         </nav>
 </header>
 <!--====================================Fin Header====================================-->
-   
-        <main>
+
+    <main class="perfil-container">
+        <div class="perfil-header">
+            <img src="../Imagenes/VACA.jpg" alt="Foto de perfil" class="foto-perfil">
+            <h1>@EcoExplorador23</h1>
+            <p>Miembro desde: Enero 2023</p>
+        </div>
+
+        <section class="datos-usuario">
+            <div class="campo-dato">
+                <h3>Biografia</h3>
+                <p>Amante de la naturaleza y conservación de especies. Participante activo en proyectos comunitarios.</p>
+            </div>
             
-        <section>
-        <h1>PERFIL</h1>    
+            <div class="campo-dato">
+                <h3>Estadísticas</h3>
+                <ul>
+                    <li>Proyectos: 12</li>
+                    <li>Contribuciones: 45</li>
+                    <li>Seguidores: 234</li>
+                </ul>
+            </div>
         </section>
-        
-        <section>
-            <form action="procesar-formulario.php" method="POST" enctype="multipart/form-data">
 
-
-                <label for="foto">Foto de perfil:</label><br>
-            <input type="file" id="foto" name="foto" accept="image/*" required><br><br>
-
-                <button type="submit">Enviar</button>
-            </form>
+        <section class="campo-dato">
+            <h3>Preferencias</h3>
+            <div class="preferencias">
+                <label><input type="checkbox" checked> Recibir notificaciones</label>
+                <label><input type="checkbox" checked> Modo oscuro</label>
+            </div>
         </section>
-        <section>
-            <form action="" method="get">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="fnombre" name="fnombre" ><br><br>
 
-                <label for="email">Correo Electrónico</label>
-                <input type="text" id="email" name="email" ><br><br>
-
-                <label for="password">Contraseña</label>
-                <input type="text" id="password" name="password" ><br><br>
-
-                <label for="edad">Edad</label>
-                <input type="text" id="edad" name="edad" min="1" max="100"><br><br>
-
-                <label for="fecha">Fecha de Nacimiento</label>
-                <input type="text" id="fecha" name="fecha"><br><br>
-
-                <label for="genero">Género</label>
-                <select id="genero" name="genero">
-                    <option value="masculino">Masculino</option>
-                    <option value="femenino">Femenino</option>
-                    <option value="otro">Otro</option>
-                </select><br><br>
-
-                <input type="submit" value="Enviar">
-            </form>
-            </section>
-        </main>
+        <section class="acciones-perfil">
+            <button class="NavFinalP-button" onclick="location.href='editar-perfil.html'">
+                Editar Perfil
+            </button>
+            <button class="NavFinalP-button" onclick="location.href='configuracion.html'">
+                Configuración
+            </button>
+            <button class="NavFinalP-button" style="background-color: #e74c3c">
+                Cerrar Sesión
+            </button>
+        </section>
+    </main>
     
 <!--====================================Footer====================================-->   
     <footer>
@@ -126,7 +125,7 @@
             <tr>
                 <td>
                     <h2 id="Pie Footer" style=" color: rgb(160, 186, 165)">Mision Biodiversa</h2>
-                    <a href="HTML/Nosotros.html">Sobre nosotros</a>
+                    <a href="../HTML/Nosotros.html">Sobre nosotros</a>
                 </td>
                 <td>
                     <h3>Por Descubrir</h3>
@@ -214,5 +213,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
+
+<!--====================================Navegador del final====================================-->
+   <div class="NavFinalP">
+    <!-- Botón 1: Regresar a página anterior -->
+    <button class="NavFinalP-button" onclick="window.history.back()">
+        ← Regresar
+    </button>
+    
+    <!-- Botón 2: Ir al inicio de la página actual -->
+    <button class="NavFinalP-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        ▲ Inicio Página
+    </button>
+    
+    <!-- Botón 3: Ir a página de inicio -->
+    <a href="../index.html" class="NavFinalP-button">
+        🏠 Inicio
+    </a>
+</div>
+<!--====================================Navegador del final====================================-->
+
 </body>
 </html>

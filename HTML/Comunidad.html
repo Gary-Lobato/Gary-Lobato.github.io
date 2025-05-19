@@ -15,7 +15,7 @@
     <table class="header-table">
                <tr>
                 <td>
-                   <a href="index.html"> <img class="logo" src="../Imagenes/Blogo.png" alt="inicio"> </a>
+                   <a href="../../index.html"> <img class="logo" src="../Imagenes/Blogo.png" alt="inicio"> </a>
                 </td>
                 
                 
@@ -45,12 +45,12 @@
         ">Buscar</button>
     </form>
     
-    <script>
+     <script>
         document.getElementById('header-search').addEventListener('submit', function(e) {
             e.preventDefault();
             const query = this.q.value.trim();
             if(query) {
-                window.location.href = `buscador.html?q=${encodeURIComponent(query)}`;
+                window.location.href = `../../buscador.html?q=${encodeURIComponent(query)}`;
             }
         });
     </script>
@@ -67,25 +67,75 @@
             <ul class="menu-list">
                 <li class="menu-item"><a href="/HTML/Flora_Domestica.html">Flora</a></li>
                 <li class="menu-item"><a href="/HTML/FAUNA_Domestica.html">Fauna</a></li>
-                <li class="menu-item"><a href="HTML/material_adicional.html">Extras</a></li>
+                <li class="menu-item"><a href="/HTML/material_adicional.html">Extras</a></li>
                 <li class="menu-item"><a href="/HTML/Comunidad.html">Comunidad</a></li>
                 <li class="menu-item"><a href="/HTML/perfil.html">Mi Perfil</a></li>
             </ul>
         </nav>
 </header>
 <!--====================================Fin Header====================================-->      
-        <main>
-<section id="comunidad">
+            
+   <main class="foro-container">
+        <section id="comunidad">
             <h1>COMUNIDAD</h1>
 </section>
-            
-   <section id="pregunta">
-        <form action="procesar-pregunta.php" method="POST">
-        <label for="pregunta">Haz una pregunta:</label><br>
-        <textarea id="pregunta" name="pregunta" rows="5" cols="40" placeholder="Escribe tu pregunta aquí..."></textarea><br><br>
-        <button type="submit">Enviar</button>
-    </form>    
-   </section>    
+           <div class="foro-header">
+            <h1>Foro Comunitario</h1>
+            <a href="nuevo-hilo.html" class="NavFinalP-button">
+                Nueva Pregunta
+            </a>
+        </div>
+
+        <!-- Hilo de ejemplo -->
+        <article class="hilo-foro">
+            <div class="meta-hilo">
+                <span class="etiqueta">Identificación de especies</span>
+                <span class="etiqueta">Flora</span>
+                <small>Publicado por @EcoExplorador23 - 2 horas</small>
+            </div>
+            <h2>¿Alguien sabe qué tipo de orquídea es esta?</h2>
+            <p>Encontré esta hermosa orquídea durante mi última excursión al bosque...</p>
+            <div class="acciones-hilo">
+                <button class="icono-btn"> 5 respuestas</button>
+                <button class="icono-btn"> 12</button>
+            </div>
+
+            <!-- Respuestas -->
+            <div class="respuestas">
+                <div class="respuesta">
+                    <p><strong>@BioLover:</strong> Parece una Laelia speciosa, ¿en qué altitud la encontraste?</p>
+                    <small>Hace 1 hora</small>
+                </div>
+            </div>
+        </article>
+
+        <!-- Más hilos -->
+        <article class="hilo-foro">
+            <div class="meta-hilo">
+                <span class="etiqueta">Conservación</span>
+                <span class="etiqueta">Fauna</span>
+                <small>Publicado por @GuardianVerde - 5 horas</small>
+            </div>
+            <h2>Iniciativa de limpieza en Xochimilco</h2>
+            <p>Estamos organizando una jornada de limpieza el próximo sábado...</p>
+            <div class="acciones-hilo">
+                <button class="icono-btn"> 3 respuestas</button>
+                <button class="icono-btn"> 25</button>
+            </div>
+        </article>
+    
+
+    <!-- Formulario para nuevas publicaciones-->
+    <section class="nuevo-hilo">
+        <h2>Nueva Publicación</h2>
+        <form>
+            <input type="text" placeholder="Título de tu publicación" class="search-input">
+            <textarea placeholder="Escribe tu pregunta o comentario..." rows="4"></textarea>
+            <div class="acciones-perfil">
+                <button type="submit" class="NavFinalP-button">Publicar</button>
+            </div>
+        </form>
+    </section>   
         
     </main>
         
@@ -99,7 +149,7 @@
             <tr>
                 <td>
                     <h2 id="Pie Footer" style=" color: rgb(160, 186, 165)">Mision Biodiversa</h2>
-                    <a href="HTML/Nosotros.html">Sobre nosotros</a>
+                    <a href="../HTML/Nosotros.html">Sobre nosotros</a>
                 </td>
                 <td>
                     <h3>Por Descubrir</h3>
@@ -187,5 +237,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
+
+<!--====================================Navegador del final====================================-->
+   <div class="NavFinalP">
+    <!-- Botón 1: Regresar a página anterior -->
+    <button class="NavFinalP-button" onclick="window.history.back()">
+        ← Regresar
+    </button>
+    
+    <!-- Botón 2: Ir al inicio de la página actual -->
+    <button class="NavFinalP-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        ▲ Inicio Página
+    </button>
+    
+    <!-- Botón 3: Ir a página de inicio -->
+    <a href="../index.html" class="NavFinalP-button">
+        🏠 Inicio
+    </a>
+</div>
+<!--====================================Navegador del final====================================-->
+
 </body>
 </html>

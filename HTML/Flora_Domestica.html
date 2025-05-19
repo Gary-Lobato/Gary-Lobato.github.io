@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title> Flora y Fauna Endemica</title>
+        <title> Flora Domestica</title>
         
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 <link rel="stylesheet" href="../CSS/estilos-unificados.css">
@@ -15,7 +15,7 @@
     <table class="header-table">
                <tr>
                 <td>
-                   <a href="index.html"> <img class="logo" src="../Imagenes/Blogo.png" alt="inicio"> </a>
+                   <a href="../../index.html"> <img class="logo" src="../Imagenes/Blogo.png" alt="inicio"> </a>
                 </td>
                 
                 
@@ -45,12 +45,12 @@
         ">Buscar</button>
     </form>
     
-    <script>
+     <script>
         document.getElementById('header-search').addEventListener('submit', function(e) {
             e.preventDefault();
             const query = this.q.value.trim();
             if(query) {
-                window.location.href = `buscador.html?q=${encodeURIComponent(query)}`;
+                window.location.href = `../../buscador.html?q=${encodeURIComponent(query)}`;
             }
         });
     </script>
@@ -67,7 +67,7 @@
             <ul class="menu-list">
                 <li class="menu-item"><a href="/HTML/Flora_Domestica.html">Flora</a></li>
                 <li class="menu-item"><a href="/HTML/FAUNA_Domestica.html">Fauna</a></li>
-                <li class="menu-item"><a href="HTML/material_adicional.html">Extras</a></li>
+                <li class="menu-item"><a href="/HTML/material_adicional.html">Extras</a></li>
                 <li class="menu-item"><a href="/HTML/Comunidad.html">Comunidad</a></li>
                 <li class="menu-item"><a href="/HTML/perfil.html">Mi Perfil</a></li>
             </ul>
@@ -87,31 +87,32 @@
                 <p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/8L41qhmfeEc?si=sn83GnXvh_f_jU-D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </p>
+                </section>
                 <section>
                     <h2>Algunas de las plantas mas conocidas son:</h2>
-                    <div class="contenedor-horizontal">
-                        <div class="imagen">
-                            <a href="/HTML/MAIZ.html">
-                            <img id="maiz "src="/Imagenes/MAIZ.jpg" alt="maiz" height="250">
-                            </a>
-                            <div class="texto">Maíz</div>
-                        </div>
-                        <div class="imagen">
-                            <a href="/HTML/CEMPA.html">
-                            <img id="cempa" src="/Imagenes/CEMPA.jpg" alt="cempa" height="250">
-                            </a>
-                            <div class="texto">Cempasúchil</div>
-                        </div>
-                        <div class="imagen"> 
-                            <a href="/HTML/NOPAL.html">
-                            <img is="nopal" src="/Imagenes/NOPAL.jpg" alt="nopal" height="250">
-                            </a>
-                            <div class="texto">Nopal</div>
-                        </div>
-                    </div>
-                    
+                    <div class="contenedor-horizontal" style="display: flex; flex-direction: row; gap: 25px; align-items: center">
+                <div class="imagen" style="margin-bottom: 15px; text-align: center">
+                    <a href="/HTML/MAIZ.html">
+                    <img src="/Imagenes/MAIZ.jpg" alt="maiz" style="width: 100%; max-width: 300px; height: auto">
+                    </a>
+
+                    <div class="texto" style="margin-top: 10px; font-weight: 600; color: #23684C">Maíz</div>
+                </div>
+                <div class="imagen" style="margin-bottom: 15px; text-align: center">
+                    <a href="/HTML/CEMPA.html">
+                            <img src="/Imagenes/CEMPA.jpg" alt="cempasúchil" style="width: 100%; max-width: 300px; height: auto">
+                    </a>
+                     <div class="texto" style="margin-top: 10px; font-weight: 600; color: #23684C">Cempasúchil</div>
+                </div>
+                <div class="imagen" style="margin-bottom: 15px; text-align: center">
+                    <a href="/HTML/NOPAL.html">
+                            <img src="/Imagenes/NOPAL.jpg" alt="nopal" style="width: 100%; max-width: 300px; height: auto">
+                    </a>
+                    <div class="texto" style="margin-top: 10px; font-weight: 600; color: #23684C">Nopal</div>
+                </div>
+                </div>
+
                 </section>
-            </section>
         </main>
     
 <!--====================================Footer====================================-->   
@@ -120,7 +121,7 @@
             <tr>
                 <td>
                     <h2 id="Pie Footer" style=" color: rgb(160, 186, 165)">Mision Biodiversa</h2>
-                    <a href="HTML/Nosotros.html">Sobre nosotros</a>
+                    <a href="../HTML/Nosotros.html">Sobre nosotros</a>
                 </td>
                 <td>
                     <h3>Por Descubrir</h3>
@@ -208,5 +209,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
+
+<!--====================================Navegador del final====================================-->
+   <div class="NavFinalP">
+    <!-- Botón 1: Regresar a página anterior -->
+    <button class="NavFinalP-button" onclick="window.history.back()">
+        ← Regresar
+    </button>
+    
+    <!-- Botón 2: Ir al inicio de la página actual -->
+    <button class="NavFinalP-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        ▲ Inicio Página
+    </button>
+    
+    <!-- Botón 3: Ir a página de inicio -->
+    <a href="../index.html" class="NavFinalP-button">
+        🏠 Inicio
+    </a>
+</div>
+<!--====================================Navegador del final====================================-->
+
 </body>
 </html>

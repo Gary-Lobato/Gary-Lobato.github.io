@@ -1,6 +1,6 @@
 <html>
 <head> 
-    <title>Flora y Fauna</title>
+    <title>Cempasuchil</title>
     
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -16,7 +16,7 @@
     <table class="header-table">
                <tr>
                 <td>
-                   <a href="index.html"> <img class="logo" src="../Imagenes/Blogo.png" alt="inicio"> </a>
+                   <a href="../../index.html"> <img class="logo" src="../Imagenes/Blogo.png" alt="inicio"> </a>
                 </td>
                 
                 
@@ -46,12 +46,12 @@
         ">Buscar</button>
     </form>
     
-    <script>
+     <script>
         document.getElementById('header-search').addEventListener('submit', function(e) {
             e.preventDefault();
             const query = this.q.value.trim();
             if(query) {
-                window.location.href = `buscador.html?q=${encodeURIComponent(query)}`;
+                window.location.href = `../../buscador.html?q=${encodeURIComponent(query)}`;
             }
         });
     </script>
@@ -68,7 +68,7 @@
             <ul class="menu-list">
                 <li class="menu-item"><a href="/HTML/Flora_Domestica.html">Flora</a></li>
                 <li class="menu-item"><a href="/HTML/FAUNA_Domestica.html">Fauna</a></li>
-                <li class="menu-item"><a href="HTML/material_adicional.html">Extras</a></li>
+                <li class="menu-item"><a href="/HTML/material_adicional.html">Extras</a></li>
                 <li class="menu-item"><a href="/HTML/Comunidad.html">Comunidad</a></li>
                 <li class="menu-item"><a href="/HTML/perfil.html">Mi Perfil</a></li>
             </ul>
@@ -79,29 +79,20 @@
        
         <main>
             <section>
-              <div class="cempa">
-                   <div class="titulo">
                    <h1>Cempasúchil (Tagetes erecta)</h1>
-                   </div>
-                       <div class="info">
+                       
                         <p>Principales Características : La principal característica de las flores es que están agrupadas en cabezuelas o en inflorescencias solitarias, sobre pedúnculos de hasta 15 cm de largo, son liguladas de colores amarillo a rojo. En las flores del disco: 150 a 250 en las cabezuelas sencillas, en las «dobles» muestra diferentes grados de transformación en lígulas, corolas amarillas a anaranjadas, de 8 a 10 mm de largo. Los frutos y semillas son: aquenios lineares de 7 a 10 mm de largo, lisos o ligeramente cubiertos de pelitos rígidos en los ángulos. Posee un largo periodo de floración que se extiende durante todo el verano y el otoño. Se reproduce fácilmente por semillas.</p>
                         <p>Origen: El registro arqueológico del uso de Tagetes erecta entre las civilizaciones prehispánicas no es tan abundante como en el caso de otras especies de la misma familia. Por ejemplo, se ha logrado establecer el uso ceremonial entre los mexicas de Tagetes lucida como planta aromática, a la que llamaban yauhtli, a través del análisis químico de los sahumerios encontrados los restos del Templo Mayor en la Ciudad de México.</p>
                         <p>Importancia económica y cultural: tiene diferentes usos e importancias, se ha observado su uso en la Etnobotanica, Usos médicos y nutricionales, colorante, insecticida, avicultura. Otros usos son el uso cultural y para ser más específico como adorno en el día de muertos.</p>
+                        
+                        <div>
+                        <img id="cempa" src="/Imagenes/CEMPA.jpg" alt="cempa" height="250" style="text-align: center; display:inline-block">
                         </div>
-                        <div class="imagen">
-                        <img id="cempa" src="/Imagenes/CEMPA.jpg" alt="cempa" height="250">
-                        </div>
-                </div>
             </section>
             <section>
-                <div class="mapa">
-                    <div class="sub">
-                    <h2>Ubicación en México: Los principales estados donde crece esta flor es en; Chiapas, Tabasco, México, Morelos, Puebla, San Luis Potosí, Sinaloa, Tlaxcala, Oaxaca, Jalisco, Hidalgo, Veracruz, Yucatan, Campeche y Quintana Roo.</h2>
-                    </div>
-                    <div class="imagen">
+                    <h2>Ubicación en México:</h2> 
+                    <p style="text-align: justify">Los principales estados donde crece esta flor es en; Chiapas, Tabasco, México, Morelos, Puebla, San Luis Potosí, Sinaloa, Tlaxcala, Oaxaca, Jalisco, Hidalgo, Veracruz, Yucatan, Campeche y Quintana Roo.</p>
                     <img id="cempam"src="/Imagenes/MAPA_CEMPA.jpg" alt="cempam" height="500">
-                    </div>
-                </div>
             </section>    
         </main>
 <!--====================================Footer====================================-->   
@@ -110,7 +101,7 @@
             <tr>
                 <td>
                     <h2 id="Pie Footer" style=" color: rgb(160, 186, 165)">Mision Biodiversa</h2>
-                    <a href="HTML/Nosotros.html">Sobre nosotros</a>
+                    <a href="../HTML/Nosotros.html">Sobre nosotros</a>
                 </td>
                 <td>
                     <h3>Por Descubrir</h3>
@@ -198,5 +189,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
+
+<!--====================================Navegador del final====================================-->
+   <div class="NavFinalP">
+    <!-- Botón 1: Regresar a página anterior -->
+    <button class="NavFinalP-button" onclick="window.history.back()">
+        ← Regresar
+    </button>
+    
+    <!-- Botón 2: Ir al inicio de la página actual -->
+    <button class="NavFinalP-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        ▲ Inicio Página
+    </button>
+    
+    <!-- Botón 3: Ir a página de inicio -->
+    <a href="../index.html" class="NavFinalP-button">
+        🏠 Inicio
+    </a>
+</div>
+<!--====================================Navegador del final====================================-->
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title></title>
+        <title>Material_Adicional</title>
         
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 <link rel="stylesheet" href="../CSS/estilos-unificados.css">
@@ -15,7 +15,7 @@
     <table class="header-table">
                <tr>
                 <td>
-                   <a href="index.html"> <img class="logo" src="../Imagenes/Blogo.png" alt="inicio"> </a>
+                   <a href="../../index.html"> <img class="logo" src="../Imagenes/Blogo.png" alt="inicio"> </a>
                 </td>
                 
                 
@@ -45,12 +45,12 @@
         ">Buscar</button>
     </form>
     
-    <script>
+     <script>
         document.getElementById('header-search').addEventListener('submit', function(e) {
             e.preventDefault();
             const query = this.q.value.trim();
             if(query) {
-                window.location.href = `buscador.html?q=${encodeURIComponent(query)}`;
+                window.location.href = `../../buscador.html?q=${encodeURIComponent(query)}`;
             }
         });
     </script>
@@ -67,28 +67,37 @@
             <ul class="menu-list">
                 <li class="menu-item"><a href="/HTML/Flora_Domestica.html">Flora</a></li>
                 <li class="menu-item"><a href="/HTML/FAUNA_Domestica.html">Fauna</a></li>
-                <li class="menu-item"><a href="HTML/material_adicional.html">Extras</a></li>
+                <li class="menu-item"><a href="/HTML/material_adicional.html">Extras</a></li>
                 <li class="menu-item"><a href="/HTML/Comunidad.html">Comunidad</a></li>
                 <li class="menu-item"><a href="/HTML/perfil.html">Mi Perfil</a></li>
             </ul>
         </nav>
 </header>
 <!--====================================Fin Header====================================-->
-   
-    <main>  
+ 
+       
+       <main>  
         <section id="material">
-        <h1 style="color: #23684C">MATERIAL ADICIONAL</h1>
-    
-        </section>          
+        <h1>MATERIAL ADICIONAL</h1>
+        </section>   
+        
+               
+                             
         
         <section id="tutorial">
+           
             <h2>Tutorial</h2>
+            
+            <p>Cómo hacer un modelo de montañas 3D</p>
+            
             <div class="video-card">
                 <a href="https://youtu.be/Oma2FzQVUx8?si=ZCkloprz2DvBmo1-"><img id="tutorial_maqueta" src="../Imagenes/tutorial_maqueta.png" alt="Tutorial maqueta" target="_blank"></a>
-    
             </div>
-            <p>Cómo hacer un modelo de montañas 3D</p>
         </section>
+        
+        
+        
+        
 
         <section class="contenido-relacionado">
             <h2>Contenido relacionado</h2>
@@ -96,6 +105,7 @@
                 <div class="video-card">
                     <a href="https://youtu.be/1R9ZOMO7f34?si=qHfRDPvD7KWJSVGV"><img class="videos" src="../Imagenes/flora_fauna_mexico.png" alt="Flora y fauna de México"></a>
                     <span class="icono-video"></span>
+                    
                     <p>La FLORA y la FAUNA de MÉXICO</p>
                 </div>
                 <div class="video-card">
@@ -116,7 +126,7 @@
             </div>
         </section>
         <section class="articulos">
-            <h2>Artículos</h2>
+            <h1>Artículos</h1>
             <div class="grid-articulos">
                 <article class="texto">
                     <h3>Flora y Fauna Mexicana de los Centearios</h3>
@@ -129,7 +139,7 @@ vegetales.</p>
                 </article>
             
                 <article class="texto">
-                    <h3>Flora y Fauna </h3>
+                    <h1>Flora y Fauna </h3>
                     <p>La Procuraduría Federal de Protección al Ambiente te
 comparte el tercer número de la revista Mi PROFEPA
 de 2022. En esta ocasión encontrarás diversos temas
@@ -156,7 +166,7 @@ especies silvestres, exóticas y domésticas.</p>
             <tr>
                 <td>
                     <h2 id="Pie Footer" style=" color: rgb(160, 186, 165)">Mision Biodiversa</h2>
-                    <a href="HTML/Nosotros.html">Sobre nosotros</a>
+                    <a href="../HTML/Nosotros.html">Sobre nosotros</a>
                 </td>
                 <td>
                     <h3>Por Descubrir</h3>
@@ -244,5 +254,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
+
+<!--====================================Navegador del final====================================-->
+   <div class="NavFinalP">
+    <!-- Botón 1: Regresar a página anterior -->
+    <button class="NavFinalP-button" onclick="window.history.back()">
+        ← Regresar
+    </button>
+    
+    <!-- Botón 2: Ir al inicio de la página actual -->
+    <button class="NavFinalP-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        ▲ Inicio Página
+    </button>
+    
+    <!-- Botón 3: Ir a página de inicio -->
+    <a href="../index.html" class="NavFinalP-button">
+        🏠 Inicio
+    </a>
+</div>
+<!--====================================Navegador del final====================================-->
+
 </body>
 </html>

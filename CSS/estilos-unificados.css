@@ -206,6 +206,177 @@ section {
 
 
 
+/* ====================================ITZEL==================================== */
+
+
+/* TUTORIAL */
+
+
+#tutorial {
+    padding: 10px; 
+    color: #E9762B ;
+    text-align: left;
+    font-size: 20pt;
+    margin: 10px auto 10px;
+}
+
+
+.video-card {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+    height: auto;
+}
+
+.video-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 300px;
+    width: auto;
+    margin: 10px auto 10px;
+}
+
+.icono-video {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    font-size:  40pt;
+    padding: 0.5rem 0.7rem;
+    color: #000;
+    text-align: center;
+}
+
+/* CONTENIDO RELACIONADO */
+.contenido-relacionado {
+    padding: 2rem;
+    background-color: #fff8dd;
+    color: #E9762B ;
+    text-align: left;
+    font-size: 20pt;
+    
+}
+
+.videos{
+    height: 290px;
+    width: auto;
+    
+}
+.grid-videos {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap:  1.5rem;
+    justify-content: center;
+}
+
+.grid-videos .video-card {
+    height: 290px;
+    width: auto;
+}
+
+.grid-videos, .video-card, p {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    
+}
+
+/* ARTÍCULOS */
+.articulos {
+    padding: 2rem;
+   background-color: white;  
+   font-size: 2rem;
+   margin-bottom: 0;
+   color: #E9762B ;
+}
+
+.texto{
+    color: #0d4715;
+    font-size: 15pt;
+    text-align: justify;
+}
+.articulos_images{
+    width: 80%;
+}
+.grid-articulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.grid-articulos article {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.grid-articulos .imagen img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/*fondo comunidad */
+#comunidad {
+  height: 100%;
+  background-image: url('../Imagenes/comunidad.jpg');
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: 100% auto;              
+  display: flex;               
+  align-items: center;          
+  justify-content: center;     
+  color: white; 
+ font-size: 2rem;
+  /* font-size: 40pt; */
+  margin-bottom: 0;
+    
+}
+
+#material {
+  height: 350px;
+  background-image: url('../Imagenes/plumas-coloridas.jpg');
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: 100% auto;              
+  display: flex;               
+  align-items: center;          
+  justify-content: center;     
+  color: white; 
+ font-size: 2rem;
+  /* font-size: 40pt; */
+  margin-bottom: 0;
+    
+}
+#pregunta{
+    text-align: center;
+}
+
+/* ====================================termina ITZEL==================================== */
+
+#logoNos {
+  height: 500px;
+    width: 500px;
+  background-image: url('../Imagenes/logo.png');
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size:;              
+  display: flex;               
+  align-items: center;          
+  justify-content: center;     
+  color: white; 
+ font-size: 2rem;
+  /* font-size: 40pt; */
+  margin-bottom: 0;
+    border-radius: 45%;
+    
+}
+
 
 /* ====================================Componentes multimedia==================================== */
 .video-card {
@@ -363,18 +534,18 @@ input[type="submit"] {
 }
 
 .animales-link {
-    display: flex;          /* Nuevo: habilita flexbox */
-    justify-content: center;/* Centra horizontalmente */
-    align-items: center;    /* Centra verticalmente */
-    height: 300px;          /* Altura del contenedor (ajusta según necesites) */
+    display: flex;          
+    justify-content: center;
+    align-items: center;    
+    height: 300px;          
 }
 
 .animales-image {
-    width: 250px;           /* Ancho fijo */
-    height: 250px;          /* Alto fijo */
-    object-fit:fill;    /* Mantiene proporciones sin recortar */
+    width: 250px;      
+    height: 250px;         
+    object-fit:fill;   
     border-radius: 10px;
-    margin: 0 auto;         /* Centrado adicional */
+    margin: 0 auto;        
 }
 
 /* Controles */
@@ -457,6 +628,84 @@ input[type="submit"] {
 
 /*====================================Fin Menú de navegacion ====================================*/
 
+
+
+/*====================================Sobre Nosotros ====================================*/
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 30px
+}
+
+.sobrede {
+    text-align: center;
+    padding: 5%;
+    background: linear-gradient(rgba(35, 104, 76, 0.9), rgba(35, 104, 76, 0.9)),
+                url('../Imagenes/banner-about.jpg');
+    background-size: cover;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 2rem 0;
+}
+
+.mission-card, .vision {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.biodiversity-facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.facto {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+
+.columnasmienbros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin-top: 2rem;
+}
+
+.miembros {
+    text-align: center;
+    padding: 1rem;
+}
+
+.miembros img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .biodiversity-facts {
+        grid-template-columns: 1fr;
+    }
+    
+    .objetivos {
+        columns: 2;
+    }
+}
+
+/*====================================Fin Sobre Nosotros ====================================*/
 
 /*==================================== Secciones especiales ====================================*/
 .contenido-relacionado {
@@ -573,3 +822,149 @@ p{
         height: 100px;
     }
 }
+
+
+/*==================================== navegador de pestanas ====================================*/
+
+.NavFinalP {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.NavFinalP-button {
+    padding: 12px 20px;
+    background: #23684C;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.NavFinalP-button:hover {
+    background: #1A4F3A;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+}
+
+/* Versión móvil */
+@media (max-width: 768px) {
+    .NavFinalP {
+        bottom: 10px;
+        right: 10px;
+        flex-direction: column;
+    }
+    
+    .NavFinalP-button {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}
+
+/*==================================== Perfil de usuario ====================================*/
+
+.perfil-container {
+            max-width: 800px;
+    margin-top: 100px;
+            margin: 100px auto 60px;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .perfil-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .foto-perfil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #23684C;
+            margin-bottom: 1rem;
+        }
+
+        .datos-usuario {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .campo-dato {
+            padding: 1rem;
+            background: #f5f5f5;
+            border-radius: 10px;
+        }
+
+        .acciones-perfil {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+
+/*====================================Simulacion de Forooo ====================================*/
+
+
+.foro-container {
+            max-width: 1200px;
+            margin: 100px auto 60px;
+            padding: 2rem;
+        }
+
+        .foro-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .hilo-foro {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .hilo-foro:hover {
+            transform: translateY(-3px);
+        }
+
+        .etiqueta {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            background: #23684C20;
+            color: #23684C;
+            font-size: 0.9rem;
+            margin-right: 8px;
+        }
+
+        .nuevo-hilo {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .respuestas {
+            margin-left: 2rem;
+            border-left: 2px solid #eee;
+            padding-left: 1rem;
+        }
